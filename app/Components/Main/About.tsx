@@ -48,7 +48,7 @@ function LDAbout() {
       </Center>
 
       <Center>
-        <Text>I'm a&nbsp;</Text>
+        <Text>I&apos;m a&nbsp;</Text>
         <Typewriter
           onInit={(typewriter) => {
             typewriter
