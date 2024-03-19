@@ -31,7 +31,14 @@ export default function RootLayout({
         <MantineProvider>
           <AppShell>
             <AppShell.Header>
-              <div style={{ marginLeft: 10, marginRight: 10 }}>
+              <div
+                style={{
+                  marginLeft: 10,
+                  marginRight: 10,
+                  marginTop: 10,
+                  marginBottom: 10,
+                }}
+              >
                 <Flex>
                   <Item />
                   <LDButton />

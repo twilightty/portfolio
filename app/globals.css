@@ -22,3 +22,10 @@
     display: block;
   }
 }
+
+* {
+  transition-property: background;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+}
