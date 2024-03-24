@@ -10,12 +10,14 @@ import {
   ColorSchemeScript,
   MantineProvider,
   Flex,
+  Center,
+  Text,
 } from "@mantine/core";
 import Item from "@/app/Components/Main/Header/Item";
 import LDButton from "./Components/LightAndDarkButton";
 import LDAbout from "./Components/Main/About";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useLayoutEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container,
@@ -26,6 +28,8 @@ import {
 
 import { loadSlim } from "@tsparticles/slim";
 
+import Link from "next/link";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -34,6 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [init, setInit] = useState(false);
+
+  const [time, setTime] = useState(0);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -47,6 +53,15 @@ export default function RootLayout({
     }).then(() => {
       setInit(true);
     });
+  }, []);
+
+  useLayoutEffect(() => {
+    const startTime: any = new Date();
+    return () => {
+      const endTime: any = new Date();
+      const timeRendered = endTime - startTime;
+      setTime(timeRendered);
+    };
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
@@ -595,6 +610,25 @@ export default function RootLayout({
               </div>
             </AppShell.Header>
             <AppShell.Main>{children}</AppShell.Main>
+            <AppShell.Footer>
+              <Center>
+                <div
+                  style={{
+                    marginLeft: 15,
+                    marginRight: 15,
+                    marginTop: 10,
+                    marginBottom: 10,
+                  }}
+                >
+                  <Flex gap="xs">
+                    <Text>
+                      Served by <Link href="https://vercel.com">Vercel</Link>
+                    </Text>
+                    <Text>Rendered in {time}ms</Text>
+                  </Flex>
+                </div>
+              </Center>
+            </AppShell.Footer>
           </AppShell>
         </MantineProvider>
       </body>
