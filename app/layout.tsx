@@ -29,10 +29,36 @@ import {
 import { loadSlim } from "@tsparticles/slim";
 
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import { HiddenEasterEgg } from "react-hidden-easter-egg";
+
+const uwu = [
+  "https://www.youtube.com/watch?v=Bunu0wj6c9c",
+  "https://www.youtube.com/watch?v=GatNL0mmQGc",
+  "https://www.youtube.com/watch?v=leJb3VhQCrg",
+  "https://www.youtube.com/watch?v=lB3SRFPYf98",
+  "https://www.youtube.com/watch?v=zDrji1Uwnh8",
+  "https://www.youtube.com/watch?v=sQlQpKpQOpc",
+  "https://www.youtube.com/watch?v=6r7jzy1LABY",
+  "https://www.youtube.com/watch?v=OuNo8Tkb3lI",
+  "https://www.youtube.com/watch?v=akgNYX8i9Xs",
+  "https://www.youtube.com/watch?v=KSe4k0WrpjY",
+  "https://www.youtube.com/watch?v=0VC6euBtKkk",
+  "https://www.youtube.com/watch?v=95ahbau-rJk",
+  "https://www.youtube.com/watch?v=86htdJAHF-E",
+  "https://www.youtube.com/watch?v=vVhKA9Av6vA",
+  "https://www.youtube.com/watch?v=v1ADEPnPt54",
+  "https://www.youtube.com/watch?v=RlBkvjVss-s",
+  "https://www.youtube.com/watch?v=cPkE0IbDVs4",
+  "https://www.youtube.com/watch?v=YXkp77tR9vw",
+  "https://www.youtube.com/watch?v=XmTLFtbv0Oo",
+  "https://www.youtube.com/watch?v=6i41YbU4QuA",
+  "https://www.youtube.com/watch?v=Zzn9-ATB9aU",
+];
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -586,6 +612,17 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider defaultColorScheme="dark">
+          <HiddenEasterEgg
+            code={["t", "r", "a", "c", "k"]}
+            resetEggMs={10000}
+            cb={() => {
+              var item: string = uwu[Math.floor(Math.random() * uwu.length)];
+              console.log(item);
+              window.location.href = item;
+            }}
+          >
+            <Text></Text>
+          </HiddenEasterEgg>
           <AppShell>
             <div
               style={{
