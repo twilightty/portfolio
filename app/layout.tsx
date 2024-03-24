@@ -618,7 +618,7 @@ export default function RootLayout({
             cb={() => {
               var item: string = uwu[Math.floor(Math.random() * uwu.length)];
               console.log(item);
-              window.location.href = item;
+              window.open(item);
             }}
           >
             <Text></Text>
