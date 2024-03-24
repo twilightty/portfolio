@@ -568,11 +568,17 @@ export default function RootLayout({
       <body>
         <MantineProvider defaultColorScheme="dark">
           <AppShell>
-            <Particles
-              id="tsparticles"
-              particlesLoaded={particlesLoaded}
-              options={options}
-            />
+            <div
+              style={{
+                opacity: 0.4,
+              }}
+            >
+              <Particles
+                id="tsparticles"
+                particlesLoaded={particlesLoaded}
+                options={options}
+              />
+            </div>
             <AppShell.Header>
               <div
                 style={{
