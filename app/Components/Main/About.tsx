@@ -58,9 +58,9 @@ function LDAbout() {
               .typeString(" Music Producer")
               .pauseFor(500)
               .deleteChars(14)
-	      .typeString(" Security Researcher")
-	      .pauseFor(500)
-	      .deleteChars(20)
+              .typeString(" Security Researcher")
+              .pauseFor(500)
+              .deleteChars(20)
               .start();
           }}
           options={{

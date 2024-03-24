@@ -31,14 +31,21 @@ export default function Gear() {
             >
               <div>
                 <Text>Mirrors</Text>
-	      	<ul>
-		  <li>
-		    <Link href="https://mirror.kirbee.tech/archlinux">Arch Linux</Link>
-		  </li>
-      <li>
-        <Link href="https://mirror.kirbee.tech/debiancd">Debian CD</Link>
-      </li>
-		</ul>
+                <ul>
+                  <li>
+                    <Link href="https://mirror.kirbee.tech/archlinux">
+                      Arch Linux
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="https://mirror.kirbee.tech/debiancd">
+                      Debian CD
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="https://mirror.kirbee.tech/gentoo">Gentoo</Link>
+                  </li>
+                </ul>
               </div>
 
               <div></div>

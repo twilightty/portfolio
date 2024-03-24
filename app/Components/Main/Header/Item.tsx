@@ -28,6 +28,9 @@ export default function Item() {
               label="Self-hosted Projects"
             ></NavLink>
           </Menu.Item>
+          <Menu.Item>
+            <NavLink component={Link} href="/mirrors" label="Mirrors"></NavLink>
+          </Menu.Item>
         </Menu.Dropdown>
       </Menu>
     </Group>
