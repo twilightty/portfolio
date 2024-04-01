@@ -30,6 +30,10 @@ export default function Gear() {
             >
               <div>
                 <Text>💻 MacBook Pro 2023 (M3 Pro/18)</Text>
+
+                <Space h="xs"></Space>
+                <Text>⌨️ Lily58</Text>
+
                 <Space h="xs"></Space>
                 <Text>🖥️ Custom one</Text>
 
