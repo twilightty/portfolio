@@ -662,9 +662,6 @@ export default function RootLayout({
                   }}
                 >
                   <Flex gap="xs">
-                    <Text>
-                      Served by <Link href="https://vercel.com">Vercel</Link>
-                    </Text>
                     <Text>Rendered in {time}ms</Text>
                   </Flex>
                 </div>
