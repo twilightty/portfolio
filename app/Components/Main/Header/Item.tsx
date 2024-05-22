@@ -2,18 +2,27 @@ import { Anchor, Group, Menu, Button, NavLink } from "@mantine/core";
 import Link from "next/link";
 export default function Item() {
   return (
-    <Group>
+    <Group
+    gap="lg"
+    >
+  
+      <Anchor underline="never" href="/">
+        Home
+      </Anchor>
+
       <Menu
         shadow="md"
         width={200}
-        trigger="hover"
-        openDelay={100}
-        closeDelay={400}
+        trigger="click-hover"
         transitionProps={{ transition: "slide-down" }}
+        loop={false}
+        withinPortal={false}
+        trapFocus={false}
+        menuItemTabIndex={0}
       >
         <Menu.Target>
-          <Anchor href="/" underline="never">
-            About
+          <Anchor underline="never">
+            Links
           </Anchor>
         </Menu.Target>
 
@@ -30,6 +39,29 @@ export default function Item() {
           </Menu.Item>
           <Menu.Item>
             <NavLink component={Link} href="/mirrors" label="Mirrors"></NavLink>
+          </Menu.Item>
+        </Menu.Dropdown>
+      </Menu>
+
+      <Menu
+        shadow="md"
+        width={200}
+        trigger="click-hover"
+        transitionProps={{ transition: "slide-down" }}
+        loop={false}
+        withinPortal={false}
+        trapFocus={false}
+        menuItemTabIndex={0}
+      >
+        <Menu.Target>
+          <Anchor underline="never">
+             Misc
+          </Anchor>
+        </Menu.Target>
+
+        <Menu.Dropdown>
+          <Menu.Item>
+            <NavLink component={Link} href="/key.txt" label="PGP Key" />
           </Menu.Item>
         </Menu.Dropdown>
       </Menu>
