@@ -10,6 +10,10 @@ export default function Item() {
         Home
       </Anchor>
 
+      <Anchor underline="never" href="https://blog.kirbee.tech">
+        Blogs
+      </Anchor>
+
       <Menu
         shadow="md"
         width={200}
