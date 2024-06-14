@@ -603,6 +603,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <ColorSchemeScript />
+        <Analytics/>
       </head>
       <body>
         <MantineProvider defaultColorScheme="dark">
