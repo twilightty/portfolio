@@ -42,7 +42,7 @@ export default function Item() {
             ></NavLink>
           </Menu.Item>
           <Menu.Item>
-            <NavLink component={Link} href="/mirrors" label="Mirrors"></NavLink>
+            <NavLink component={Link} href="/mirrors" label="Mirrors (shut down)"></NavLink>
           </Menu.Item>
         </Menu.Dropdown>
       </Menu>
