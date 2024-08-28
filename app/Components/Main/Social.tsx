@@ -10,7 +10,7 @@ export default function Social() {
     <Grid>
       <Grid.Col span={3}>
         <FaGithub
-          onClick={() => openInNewTab("https://github.com/emladevops")}
+          onClick={() => openInNewTab("https://github.com/twilightty")}
         />
       </Grid.Col>
       <Grid.Col span={3}>
